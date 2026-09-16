@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #070b14;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+/* transparency checkerboard used behind the Phaser canvas */
+.lab-checker {
+  background-color: #12161f;
+  background-image:
+    linear-gradient(45deg, #1a2030 25%, transparent 25%, transparent 75%, #1a2030 75%),
+    linear-gradient(45deg, #1a2030 25%, transparent 25%, transparent 75%, #1a2030 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+
+/* slim scrollbars for the panels */
+.lab-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 transparent;
+}
+.lab-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.lab-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.lab-scroll::-webkit-scrollbar-thumb {
+  background: #27324a;
+  border-radius: 99px;
+}
+.lab-scroll::-webkit-scrollbar-thumb:hover {
+  background: #3b4a6b;
+}
+
+canvas {
+  display: block;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="color"] {
+  padding: 2px;
+}
